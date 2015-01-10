@@ -1,7 +1,7 @@
-## Coffee Test
-A client-side 4-question true/false quiz single-page web app using:
+# Coffee Test
+A client-side 4-question true/false quiz single-page web app.
 
-# Technologies used:
+## Technologies used:
 - Single-page app
 - Coffeescript
 - Backbone.js
@@ -9,7 +9,7 @@ A client-side 4-question true/false quiz single-page web app using:
 - CSS (+ Stylus?)
 - Grunt?
 
-# Requirements
+## Requirements
 
 - A test with 4 true/false questions. 
 - Only one question should be made visible to the user at a time.
