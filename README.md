@@ -6,8 +6,9 @@ A client-side 4-question true/false quiz single-page web app.
 - Coffeescript
 - Backbone.js
 - HTML
-- CSS (+ Stylus?)
-- Grunt?
+- CSS
+- Stylus
+- Grunt
 
 ## Requirements
 
