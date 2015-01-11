@@ -1,15 +1,9 @@
-window.App = {
-  Models:{},
-  Collections:{},
-  Views:{},
-}
-App.Events = _.extend({}, Backbone.Events)
+define (require) ->
+    require 'backbone'
 
-restful_sync = Backbone.sync
+    AppRouter = require './AppRouter'
 
-Backbone.sync = (method, model, options) ->
-  error = (response) ->
-    console.log "GLOBAL error"
-  success = (response) ->
-    console.log "GLOBAL success"
-  restful_sync(method, model, options)
+    initialize: ->
+        router = new AppRouter
+
+        Backbone.history.start()

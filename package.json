@@ -1,0 +1,19 @@
+{
+  "name": "CoffeeTest",
+  "version": "0.0.1",
+  "description": "A client-side 4-question true/false quiz single-page web app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cullenjohnson/CoffeeTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cullenjohnson/CoffeeTest/issues"
+  },
+  "homepage": "https://github.com/cullenjohnson/CoffeeTest"
+}

@@ -1,8 +1,11 @@
-class App.Views.TestView extends Backbone.View
-    initialize: (options) =>
-        console.log('test');
-        @render();
+define (require) ->
 
-    render: =>
-        this.$el.html('Hello World');
-        return this;
+    require 'backbone'
+    
+    class TestView extends Backbone.View
+        initialize: (options) ->
+            @render()
+
+        render: ->
+            @$el.html 'Hello World'
+            return this

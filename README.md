@@ -5,6 +5,7 @@ A client-side 4-question true/false quiz single-page web app.
 - Single-page app
 - Coffeescript
 - Backbone.js
+- Require.js
 - HTML
 - CSS
 - Stylus

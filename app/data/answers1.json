@@ -1,0 +1,8 @@
+{
+    "answers": [
+        { "id": 1, "selected": true},
+        { "id": 2, "selected": false},
+        { "id": 3, "selected": true},
+        { "id": 4, "selected": false}
+    ]
+}

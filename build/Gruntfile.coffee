@@ -55,6 +55,26 @@ module.exports = (grunt) ->
                 options:
                     spawn: false
 
+        'http-server':
+            'dev':
+
+                # the server root directory
+                root: 'out'
+
+                port: 8282
+                # port: function() { return 8282; }
+
+                host: "127.0.0.1"
+
+                showDir : true
+                autoIndex: true
+
+                # server default file extension
+                ext: "html"
+
+                # run in parallel with other tasks
+                runInBackground: false
+
 
     # Load the plugins
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -63,5 +83,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-http-server');
 
     grunt.registerTask('default', ['clean', 'copy', 'stylus', 'coffee', 'autoprefixer']);
+
