@@ -7,11 +7,48 @@
     <link rel="stylesheet" media="screen" href="css/style.css"></script>
 
     <!-- lib -->
-    <script type="text/javascript" data-main="js/main.js" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script>
+    <script type="text/javascript" data-main="js/main.js" src="js/lib/require-min.js"></script>
 
 </head>
 
 <body>
+
+<!-- This is the main element. -->
+<div id="main"></div>
+
+<script id="main_template" type="text/template">
+    <div id="header">
+        <h1>{{header}}</h1>
+    </div>
+    <div id="body">
+        {{{body}}}
+    </div>
+    <div id="footer">
+        {{{footer}}}
+    </div>
+</script>
+
+<script id="welcome_body" type="text/template">
+        This is a simple quiz with 4 True or False Questions. Are you ready to begin?
+        <br>
+        <a class="button primary_action centered" href="#start">I know (how to Google) everything! Start the quiz!</a>
+</script>
+
+<script id="start_body" type="text/template">
+    <input type="text" id="name_entry"> <span class="button primary_action" id="beginQuiz">Continue</span>
+    <br>
+    <span class="light_text">Or click here: </span><a href="#quiz/anonymous" title="For those who are wearing tinfoil hats. (This will keep your name from being stored with your score on the rankings page.)">I wish to remain anonymous.</a>
+</script>
+
+<script id="quiz_body_template" type="text/template">
+    {{question}}
+    <br>
+    <span id="btn_true" class="button true_button">True</span> <span id="btn_false" class="button false_button">False</span>
+</script>
+
+<script id="rankings_link" type="text/template">
+        <a href="#rankings">View Rankings</a>
+</script>
 
 </body>
 </html> 

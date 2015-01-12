@@ -4,8 +4,8 @@ define (require) ->
 
     class Question extends Backbone.Model
         defaults:
-            id: null    # The ID for the question.
-            text: null  # The question's display text
+            id: null        # The ID for the answer.
+            selected: null  # The answerr value
 
         initialize: =>
 

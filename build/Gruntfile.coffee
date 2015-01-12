@@ -30,7 +30,7 @@ module.exports = (grunt) ->
         coffee:
             compileCoffeeScripts:
                 options:
-                    sourceMap: true
+                    sourceMap: false
                     flatten: false
                 files: [{
                     expand: true

@@ -2,21 +2,22 @@
 A client-side 4-question true/false quiz single-page web app.
 
 ## Technologies used:
-- Single-page app
 - Coffeescript
 - Backbone.js
 - Require.js
-- HTML
-- CSS
+- mustache.js
 - Stylus
 - Grunt
+- HTML5
+- CSS3
 
 ## Requirements
 
+- Single-page app
 - A test with 4 true/false questions. 
 - Only one question should be made visible to the user at a time.
 - Results can be stored on the client; server-side code is not necessary.
-- Examples of JSON for questions and answers have been included below.
+- Examples of JSON for questions and answers below:
 
 <pre>
     {
