@@ -6,4 +6,5 @@ require.config
         Mustache: "lib/mustache"
 
 require ["application"], (app) ->
-  app.initialize()
+    $.fx.off = false
+    app.initialize()

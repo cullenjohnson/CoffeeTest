@@ -1,8 +1,11 @@
 define (require) ->
     require 'backbone'
 
-    IndexView = require 'Views/IndexView'
-    StartView = require 'Views/StartView'
+    IndexView = require 'views/IndexView'
+    StartView = require 'views/StartView'
+    QuizView = require 'views/QuizView'
+
+    QuizSession = require 'models/QuizSession'
 
     class AppRouter extends Backbone.Router
 
@@ -14,6 +17,7 @@ define (require) ->
 
         routes:
             'start':        'startRoute'
+            'quiz/:name':   'quizRoute'
             '*catch_all':   'indexRoute'
 
         indexRoute: (catch_all) ->
@@ -26,3 +30,7 @@ define (require) ->
 
         startRoute: ->
             @view = new StartView el: $ '#main'
+
+        quizRoute: (name) ->
+            model = new QuizSession({username: name})
+            @view = new QuizView el: $('#main'), model: model 

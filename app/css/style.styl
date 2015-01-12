@@ -1,5 +1,5 @@
 body
-    font-family Helvetica, Arial
+    font-family 'Source Sans Pro', Helvetica, sans-serif
     background #efefef
     
 a
@@ -63,10 +63,18 @@ a.button, span.button
     padding 5px
     min-width 75px
     margin 2px
-    transition background 0.2s
+    transition background 0.2s, color 0.2s
     border-radius 3px
     cursor pointer
     user-select none
+    
+    &.disabled
+        color #7f7f7f
+        background #dfdfdf
+        cursor: default
+        &:hover
+            color #7f7f7f
+            background #dfdfdf
     
     &:hover
         color: white
