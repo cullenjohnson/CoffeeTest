@@ -2,14 +2,20 @@
 A client-side 4-question true/false quiz single-page web app.
 
 ## Technologies used:
-- Coffeescript
-- Backbone.js
-- Require.js
-- mustache.js
-- Stylus
-- Grunt
+- [Coffeescript](http://coffeescript.org/) \*
+- [jQuery](http://jquery.com/)
+- [Backbone.js](http://backbonejs.org/)
+- [Underscore.js](http://underscorejs.org/)
+- [Backbone-localStorage](https://github.com/jeromegn/Backbone.localStorage) \*
+- [Require.js](http://requirejs.org/) \*
+- [mustache.js](https://github.com/janl/mustache.js/) \*
+- [moment.js](http://momentjs.com/) \*
+- [Stylus](http://learnboost.github.io/stylus/) \*
+- [Grunt](http://gruntjs.com/) \*
 - HTML5
 - CSS3
+
+\* (Items with an asterisk indicate technologies that were new to me at the time of writing)
 
 ## Requirements
 
