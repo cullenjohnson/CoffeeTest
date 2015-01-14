@@ -53,7 +53,7 @@ module.exports = (grunt) ->
                 files: ['../app/**/*.coffee', '../app/**/*.styl', '../app/**/*.html']
                 tasks: ['default']
                 options:
-                    spawn: false
+                    spawn: true
 
         'http-server':
             'dev':
@@ -73,17 +73,19 @@ module.exports = (grunt) ->
                 ext: "html"
 
                 # run in parallel with other tasks
-                runInBackground: false
+                runInBackground: true
 
 
     # Load the plugins
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-contrib-coffee');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-http-server');
+    grunt.loadNpmTasks 'grunt-contrib-clean'
+    grunt.loadNpmTasks 'grunt-contrib-copy'
+    grunt.loadNpmTasks 'grunt-contrib-stylus'
+    grunt.loadNpmTasks 'grunt-contrib-coffee'
+    grunt.loadNpmTasks 'grunt-autoprefixer'
+    grunt.loadNpmTasks 'grunt-contrib-watch'
+    grunt.loadNpmTasks 'grunt-http-server'
 
-    grunt.registerTask('default', ['clean', 'copy', 'stylus', 'coffee', 'autoprefixer']);
+    grunt.registerTask('default', ['clean', 'copy', 'stylus', 'coffee', 'autoprefixer'])
+
+    grunt.registerTask('server', ['http-server', 'watch'])
 

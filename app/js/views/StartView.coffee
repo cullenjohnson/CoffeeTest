@@ -17,7 +17,7 @@ define (require) ->
         build: ->
             template = $('#main_template').html()
             bodyHtml = $('#start_body').html()
-            footerHtml = $('#rankings_link').html()
+            footerHtml = $('#restart_link').html()
             data =
                 header: 'Please enter your name'
                 body: bodyHtml
@@ -30,6 +30,7 @@ define (require) ->
         ###
         events:
             'click #beginQuiz': 'beginQuizClick'
+            'keyup #name_entry': 'nameEntryKeyUp'
 
         beginQuizClick: (e) ->
             nameData = $('#name_entry').val()
@@ -51,7 +52,7 @@ define (require) ->
             # Check the name length
             else if nameData.length > @MAX_NAME_LENGTH
                 continueOn = false
-                alert("The name you entered was too long. Please enter a name that is shorter than #{ @MAX_NAME_LENGTH } characters.")
+                toast "The name you entered was too long. Please enter a name that is shorter than #{ @MAX_NAME_LENGTH } characters."
 
             # Send event up to router that a name is ready
             if continueOn
@@ -59,4 +60,7 @@ define (require) ->
                     nameData = 'anonymous'
 
                 window.App.router.navigate "quiz/#{ nameData }", trigger: true
-
+                
+        nameEntryKeyUp: (e) ->
+            if (e.which == 13)
+                @beginQuizClick(e)

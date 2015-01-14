@@ -26,6 +26,7 @@ define (require) ->
                 footer: '' 
 
             @$el.html Mustache.to_html template, data
+            @listenToOnce(@model, 'finalize', @gotoRankings)
 
         render: ->
             if @model.get('async_counter') == 0 and @model.getCurrentQuestion()?
@@ -34,7 +35,9 @@ define (require) ->
                     @$('#body').animate({opacity: 1})
                 )
             else if @model.get('async_counter') == 0 and not @model.getCurrentQuestion()?
-                @$('#body').animate({opacity: 0}, @renderLoading)
+                @renderLoading
+                @$('#body').animate({opacity: 0})
+
             else
                 @renderLoading()
 
@@ -75,6 +78,9 @@ define (require) ->
 
         falseClick: (e) ->
             @buttonHelper(false)
+
+        gotoRankings: ->
+            App.router.navigate "results/#{ @model.get('timestamp') }", trigger: true
 
         buttonHelper: (trueOrFalse) ->
             trueBtn = @$('#btn_true')
